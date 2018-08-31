@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Autor:</strong>
+  <%= @noticium.autor %>
+</p>
+
+<p>
+  <strong>Avatar:</strong>
+  <%= @noticium.avatar %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @noticium.fecha %>
+</p>
+
+<p>
+  <strong>Imagen:</strong>
+  <%= @noticium.imagen %>
+</p>
+
+<p>
+  <strong>Resumen:</strong>
+  <%= @noticium.resumen %>
+</p>
+
+<%= link_to 'Edit', edit_noticium_path(@noticium) %> |
+<%= link_to 'Back', noticia_path %>
