@@ -1,0 +1,66 @@
+<%= form_with(model: answer, local: true) do |form| %>
+  <% if answer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(answer.errors.count, "error") %> prohibited this answer from being saved:</h2>
+
+      <ul>
+      <% answer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :optionA %>
+    <%= form.text_area :optionA %>
+  </div>
+
+    <div class="field">
+    <%= form.label :valueA %>
+    <%= form.text_area :valueA %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :optionB %>
+    <%= form.text_area :optionB %>
+  </div>
+
+    <div class="field">
+    <%= form.label :valueB %>
+    <%= form.text_area :valueB %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :optionC %>
+    <%= form.text_area :optionC %>
+  </div>
+
+    <div class="field">
+    <%= form.label :valueC %>
+    <%= form.text_area :valueC %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :optionD %>
+    <%= form.text_area :optionD %>
+  </div>
+
+    <div class="field">
+    <%= form.label :valueD %>
+    <%= form.text_area :valueD %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :question_id %>
+    <%= form.text_field :question_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

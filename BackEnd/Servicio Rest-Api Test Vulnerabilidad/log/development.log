@@ -1,0 +1,194 @@
+  [1m[35m (16.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7458657555131878620)[0m
+  ↳ bin/rails:4
+  [1m[35m (63.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddValueAToAnswer (20180925150331)
+  [1m[35m (8.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (91.9ms)[0m  [1m[35mALTER TABLE "answers" ADD "valueA" integer[0m
+  ↳ db/migrate/20180925150331_add_value_a_to_answer.rb:3
+  [1m[35m (0.0ms)[0m  [1m[35mALTER TABLE "answers" ADD "valueB" integer[0m
+  ↳ db/migrate/20180925150331_add_value_a_to_answer.rb:4
+  [1m[35m (0.0ms)[0m  [1m[35mALTER TABLE "answers" ADD "valueC" integer[0m
+  ↳ db/migrate/20180925150331_add_value_a_to_answer.rb:5
+  [1m[35m (0.0ms)[0m  [1m[35mALTER TABLE "answers" ADD "valueD" integer[0m
+  ↳ db/migrate/20180925150331_add_value_a_to_answer.rb:6
+  [1m[36mActiveRecord::SchemaMigration Create (20.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180925150331"]]
+  ↳ bin/rails:4
+  [1m[35m (28.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (85.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(7458657555131878620)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/" for 127.0.0.1 at 2018-09-25 10:04:28 -0500
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (13.7ms)
+Completed 200 OK in 131ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/answers.json" for 127.0.0.1 at 2018-09-25 10:04:30 -0500
+Processing by AnswersController#index as JSON
+  Rendering answers/index.json.jbuilder
+  [1m[36mAnswer Load (52.7ms)[0m  [1m[34mSELECT "answers".* FROM "answers"[0m
+  ↳ app/views/answers/index.json.jbuilder:1
+  [1m[36mQuestion Load (33.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/answers/index.json.jbuilder:4
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/answers/index.json.jbuilder:4
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/answers/index.json.jbuilder:4
+  [1m[36mQuestion Load (4.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/answers/index.json.jbuilder:4
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/answers/index.json.jbuilder:4
+  Rendered answers/index.json.jbuilder (218.8ms)
+Completed 200 OK in 343ms (Views: 172.3ms | ActiveRecord: 102.0ms)
+
+
+Started GET "/answers" for 127.0.0.1 at 2018-09-25 10:04:34 -0500
+Processing by AnswersController#index as HTML
+  Rendering answers/index.html.erb within layouts/application
+  [1m[36mAnswer Load (4.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers"[0m
+  ↳ app/views/answers/index.html.erb:18
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:24
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:24
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:24
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:24
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:24
+  Rendered answers/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 2352ms (Views: 2295.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/answers" for 127.0.0.1 at 2018-09-25 10:05:13 -0500
+Processing by AnswersController#index as HTML
+  Rendering answers/index.html.erb within layouts/application
+  [1m[36mAnswer Load (0.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers"[0m
+  ↳ app/views/answers/index.html.erb:18
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:24
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:24
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:24
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:24
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:24
+  Rendered answers/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 133ms (Views: 118.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/answers" for 127.0.0.1 at 2018-09-25 10:07:20 -0500
+Processing by AnswersController#index as HTML
+  Rendering answers/index.html.erb within layouts/application
+  [1m[36mAnswer Load (0.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers"[0m
+  ↳ app/views/answers/index.html.erb:22
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:32
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:32
+  [1m[36mQuestion Load (4.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:32
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:32
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:32
+  Rendered answers/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 136ms (Views: 115.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/answers" for 127.0.0.1 at 2018-09-25 10:09:48 -0500
+Processing by AnswersController#index as HTML
+  Rendering answers/index.html.erb within layouts/application
+  [1m[36mAnswer Load (0.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers"[0m
+  ↳ app/views/answers/index.html.erb:22
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:32
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:32
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:32
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:32
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:32
+  Rendered answers/index.html.erb within layouts/application (45.7ms)
+Completed 200 OK in 170ms (Views: 147.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/answers" for 127.0.0.1 at 2018-09-25 10:27:30 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by AnswersController#index as HTML
+  Rendering answers/index.html.erb within layouts/application
+  [1m[36mAnswer Load (4.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers"[0m
+  ↳ app/views/answers/index.html.erb:22
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:32
+  [1m[36mQuestion Load (3.7ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:32
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:32
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:32
+  [1m[36mQuestion Load (4.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/answers/index.html.erb:32
+  Rendered answers/index.html.erb within layouts/application (49.7ms)
+Completed 200 OK in 398ms (Views: 347.1ms | ActiveRecord: 23.7ms)
+
+
+Started GET "/answers.json" for 127.0.0.1 at 2018-09-25 10:27:35 -0500
+Processing by AnswersController#index as JSON
+  Rendering answers/index.json.jbuilder
+  [1m[36mAnswer Load (0.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers"[0m
+  ↳ app/views/answers/index.json.jbuilder:1
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/answers/index.json.jbuilder:4
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/answers/index.json.jbuilder:4
+  [1m[36mQuestion Load (4.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/answers/index.json.jbuilder:4
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/answers/index.json.jbuilder:4
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/answers/index.json.jbuilder:4
+  Rendered answers/index.json.jbuilder (12.0ms)
+Completed 200 OK in 84ms (Views: 65.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/answers.json" for 127.0.0.1 at 2018-09-25 10:28:22 -0500
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by AnswersController#index as JSON
+  Rendering answers/index.json.jbuilder
+  [1m[36mAnswer Load (0.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers"[0m
+  ↳ app/views/answers/index.json.jbuilder:1
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/answers/index.json.jbuilder:4
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/answers/index.json.jbuilder:4
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/answers/index.json.jbuilder:4
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/answers/index.json.jbuilder:4
+  [1m[36mQuestion Load (0.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/answers/index.json.jbuilder:4
+  Rendered answers/index.json.jbuilder (52.6ms)
+Completed 200 OK in 146ms (Views: 102.2ms | ActiveRecord: 11.9ms)
+
+
