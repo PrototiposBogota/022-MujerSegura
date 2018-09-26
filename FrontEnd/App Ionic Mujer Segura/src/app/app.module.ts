@@ -12,16 +12,21 @@ import { SexualPageModule } from '../pages/sexual/sexual.module';
 import { PsicologicoPageModule } from '../pages/psicologico/psicologico.module';
 import { FisicaPageModule} from '../pages/fisica/fisica.module';
 import { NoticiasPageModule} from '../pages/noticias/noticias.module';
-
+import { ResultadoPageModule} from '../pages/resultado/resultado.module';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Geolocation } from '@ionic-native/geolocation';
 import { CallNumber } from '@ionic-native/call-number';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { NoticiaServiceProvider } from '../providers/noticia-service/noticia-service';
+import { HomePageModule } from '../pages/home/home.module';
+import { PreguntasProvider } from '../providers/preguntas/preguntas';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
+   // HomePage,
     ListPage
   ],
   imports: [
@@ -33,7 +38,11 @@ import { CallNumber } from '@ionic-native/call-number';
     SexualPageModule,
     PsicologicoPageModule,
     FisicaPageModule,
-    NoticiasPageModule
+    NoticiasPageModule,
+    HttpClientModule,
+    HttpModule,
+    HomePageModule,
+    ResultadoPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -46,7 +55,9 @@ import { CallNumber } from '@ionic-native/call-number';
     SplashScreen,
     Geolocation,
     CallNumber,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    NoticiaServiceProvider,
+    PreguntasProvider
   ]
 })
 export class AppModule {}
