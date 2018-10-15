@@ -2,18 +2,18 @@
 
 - Reto:  Violencia contra la mujer/¿Cómo podemos disminuir los índices de violencia contra la mujer en la localidad?
 - Localidad :  Chapinero
-- Url: https://mujersegura.herokuapp.com/creatives/index
+- Url: https://mujersegura.herokuapp.com/creatives/index  :mega:
 
 
 ### Participantes
-- Hernán García (@Nancho35) :octocat:
-- Clara Guerrero (@clarahelenag) :octocat:
-- Fabio Prada (@Fabioprada) :octocat:
+- Hernán García (@Nancho35) 		:octocat:
+- Clara Guerrero (@clarahelenag) 	:octocat:
+- Fabio Prada (@Fabioprada) 		:octocat:
 
 
-### Descripción
+### Descripción 
 
-Mujer Segura es una aplicación móvil que te permite conocer los centros de atención de tu ciudad,
+Mujer Segura :woman: es una aplicación móvil que te permite conocer los centros de atención de tu ciudad,
  conoce el riesgo por medio del test de vulnerabilidad. Además encontrarás :
 
 	- Conoce las definiciones de violencia intrafamiliar, sexual, económica y política y ver algunos ejemplos de cada una de ellas.
