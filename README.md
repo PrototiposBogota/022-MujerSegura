@@ -6,9 +6,9 @@
 
 
 ### Participantes
-- Hernán García (@Nancho35)
-- Clara Guerrero (@clarahelenag)
-- Fabio Prada (@Fabioprada)
+- Hernán García (@Nancho35) :octocat:
+- Clara Guerrero (@clarahelenag) :octocat:
+- Fabio Prada (@Fabioprada) :octocat:
 
 
 ### Descripción
