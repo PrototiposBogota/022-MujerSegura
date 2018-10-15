@@ -1,15 +1,24 @@
-# Mujer Segura
+# README
 
-- URL:  xxxx.com
-- Lenguaje de desarrollo : Ruby / Ruby on Rails
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
+Things you may want to cover:
 
-### Demo
+* Ruby version
 
-Url xxxxxx.com
+* System dependencies
 
-No requerique autenticación
+* Configuration
 
-### Ejecución básica
-Sitio web donde se localiza en goolgle maps, centros de atención,ONGs y demas entidades relacionadas a la atención de mujeres victimas de violencia.
+* Database creation
 
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...

@@ -1,2 +1,0 @@
-module BienvenidoHelper
-end
